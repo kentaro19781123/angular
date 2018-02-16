@@ -1,0 +1,12 @@
+<p>{{message}}</p>
+<form>
+	<div>
+	<select [(ngModel)]="model.select" [size]="items.length">
+		<option *ngFor="let item of items" [value]="item">{{item}}</option>
+	</select>
+	<select [(ngModel)]="model.select2" [size]="items2.length" multiple>
+		<option *ngFor="let item of items2" [value]="item">{{item}}</option>
+	</select>
+</div>
+	<input type="button" (click)="onSubmit();" value="click">
+</form>

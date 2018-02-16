@@ -1,0 +1,18 @@
+<p>{{message}}</p>
+<form>
+	<div><label for="msg">Message: </label>
+		<input type="text" id="msg" name="msg"
+		[(ngModel)]="model.msg"></div>
+
+	<div><input type="checkbox" id="check" name="check"
+		[(ngModel)]="model.check">
+		<label for="check">Check box</label></div>
+
+	<div><input type="radio" id="r1" name="radio" checked
+		(change)="model.radio='A'">
+		<label for="r1">Radio 1</label>
+	　<input type="radio" id="r2" name="radio"
+		(change)="model.radio='B'">
+		<label for="r2">Radio 2</label></div>
+	<input type="button" (click)="onSubmit();" value="click">
+</form>
